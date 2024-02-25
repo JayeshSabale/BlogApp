@@ -1,0 +1,545 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* NAVBAR CSS */
+
+.navbar-header {
+  width: 100%;
+  height: 40px;
+  padding: 15px 25px;
+  color: white;
+  background: linear-gradient(
+    79deg,
+    rgb(3, 3, 154),
+    rgb(207, 8, 41),
+    rgb(4, 4, 150)
+  );
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand h3 {
+  transition: transform 0.3s ease; /* Add transition effect for transform */
+}
+
+.brand h3:hover {
+  animation: changeColor 0.5s ease forwards; /* Apply keyframes animation on hover */
+  transform: scale(1.1); /* Increase the scale on hover */
+}
+
+@keyframes changeColor {
+  0% {
+    color: inherit; /* Start with the current color */
+  }
+  50% {
+    color: #ff4500; /* Midway change color */
+  }
+  100% {
+    color: inherit; /* End with the current color */
+  }
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+  margin: 0px 10px;
+}
+
+/* REGISTER CSS */
+
+.signup_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+}
+
+.signup_form {
+  border: 1px solid gray;
+  padding: 20px;
+  border-radius: 10px;
+  width: 30%;
+}
+
+.signup_form h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.signup_form form input {
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  width: 100%;
+  border: 1px solid rgb(216, 213, 213);
+}
+
+.signup_form form button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(216, 213, 213);
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Add transition effect for background color */
+}
+
+.signup_form form button:hover {
+  background-color: #0056b3; /* Change background color on hover */
+}
+
+.signup_form p {
+  text-align: center;
+}
+
+.signup_form p a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.signup_form p a:hover {
+  text-decoration: underline;
+}
+
+/* LOGIN BUTTON CSS */
+
+.login-btn {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #28a745; /* Green color for login button */
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Add transition effect for background color */
+}
+
+.login-btn:hover {
+  background-color: #218838; /* Darker green color on hover */
+}
+
+/* LOGOUT BUTTON CSS */
+
+.logout_btn {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.logout_btn:hover {
+  color: white;
+  text-decoration: underline;
+  transform: scale(1.1);
+}
+
+/* CREATE POST CSS */
+.post_form {
+  width: 50%;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px auto; /* Center horizontally */
+}
+
+.post_form input,
+.post_form textarea,
+.post_form button {
+  width: calc(100% - 20px); /* Adjust width and subtract padding */
+  margin: 10px 0px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid rgb(216, 213, 213);
+  transition: border-color 0.3s ease; /* Add transition effect for border color */
+}
+
+.post_form input:focus,
+.post_form textarea:focus {
+  outline: none;
+  border-color: #007bff; /* Change border color on focus */
+}
+
+.post_form .file {
+  border: 1px solid gray;
+}
+
+.post_form button {
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3s ease; /* Add transition effect for background color */
+}
+
+.post_form button:hover {
+  background-color: #0056b3; /* Change background color on hover */
+}
+
+.post_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh;  */
+}
+
+.posts_container {
+  text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns with equal fractional sizes */
+  grid-gap: 20px; /* Adjust as needed */
+  margin-inline: 50px;
+}
+
+.grid-item {
+  font-size: 1rem;
+  color: black;
+  text-align: justify; /* Align text to the right */
+  padding: 20px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  text-decoration: none;
+  background-color: #f9f9f9;
+}
+
+.grid-title {
+  text-align: center;
+}
+
+.grid-item img {
+  max-width: 100%; /* Ensure images don't exceed container width */
+}
+
+.post_post {
+  text-align: center; /* Center align the content */
+  max-width: 500px; /* Set maximum width */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.post_post p {
+  text-align: justify;
+}
+
+.post_title {
+  margin: 5px;
+}
+
+.post_edit_delete {
+  margin-top: 10px;
+}
+
+.edit_button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.edit_button:hover {
+  background-color: #0056b3;
+  cursor: pointer;
+}
+
+.delete_button {
+  background-color: tomato; /* Change to tomato color */
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease; /* Add transition effect for smooth hover */
+}
+
+.delete_button:hover {
+  background-color: #e74c3c; /* Slightly darker shade of tomato */
+  cursor: pointer;
+}
+
+/* HOME PAGE CSS */
+/* Home.css */
+
+.welcome-message {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+  opacity: 0.5; /* Set initial opacity to 0 */
+  transition: opacity 1s ease; /* Apply transition effect for opacity property */
+}
+
+.welcome-message.loaded {
+  opacity: 1; /* Change opacity to 1 when loaded class is applied */
+}
+
+.loading-message {
+  font-size: 20px;
+  color: #333;
+  text-align: center;
+  margin-top: 20px;
+}
+.no-posts-container {
+  text-align: center;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+}
+
+.no-posts-container h1 {
+  color: #333;
+}
+
+.no-posts-container p {
+  color: #666;
+  margin-top: 20px;
+}
+
+.no-posts-container p a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.no-posts-container p a:hover {
+  text-decoration: underline;
+}
+
+.post {
+  width: 80%;
+  margin: 10px;
+  border: 1px solid gray;
+
+  padding: 10px;
+  display: flex;
+  text-decoration: none;
+  color: black;
+}
+.post img {
+  width: 200px;
+  height: 200px;
+}
+/* .post .post_text {
+  margin-left: 10px;
+} */
+
+.post_text h2 {
+  font-size: 24px;
+  margin: 8px;
+}
+.post_text p {
+  font-size: 16px;
+  /* margin-bottom: 20px; */
+}
+
+/* POST PAGE CSS */
+.post_post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  margin: 20px 0px;
+}
+
+.post_post img {
+  width: 100%;
+  /* height: 450px; */
+}
+
+/* .post_post button {
+  width: 10%;
+} */
+
+/* Contact.css */
+
+.contact-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px 20px 5px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.contact-container h1 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.contact-container p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input,
+input[type='email'],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.submit-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+.contact-container .copyright {
+  display: block;
+  text-align: center;
+}
+
+.custom-alert {
+  width: 40%;
+  text-align: center;
+  opacity: 0.9;
+  position: fixed;
+  top: 20px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1000; /* Adjust z-index as needed */
+}
+
+.link:hover {
+  color: #fff;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+/* CREATE POST CSS */
+
+.create-post-container {
+  display: flex;
+  justify-content: center; /* Align horizontally to the center */
+  align-items: center; /* Align vertically to the center */
+  height: 100vh; /* Set height to 100% of the viewport height */
+}
+
+/* Media Query for Mobile Devices */
+@media only screen and (max-width: 768px) {
+  /* LOGIN / REGISTER CSS */
+  .signup_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    margin: 10px auto; /* Center the container horizontally */
+  }
+
+  .signup_form {
+    border: 1px solid gray;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%; /* Adjust width for smaller screens */
+    max-width: none; /* Remove maximum width */
+    margin-inline: 10px; /* Add inline margin */
+  }
+  .signup_form h2 {
+    margin: 0;
+  }
+
+  .signup_form form button {
+    width: 90%;
+    margin-inline: 10px;
+  }
+
+  .login-btn {
+    width: 90%; /* Adjust width for smaller screens */
+    margin-inline: 10px; /* Add inline margin */
+  }
+
+  /* CONTACT FORM CSS */
+  .contact-container {
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+  }
+
+  .submit-btn {
+    width: 100%;
+  }
+
+  .custom-alert {
+    width: 80%;
+  }
+
+  /* HOME CSS */
+  .grid-container {
+    grid-template-columns: 1fr; /* Change to a single column */
+    margin-inline: 10px; /* Adjust margin as needed */
+  }
+
+  /* CONTACT CSS */
+  .post_form {
+    width: 90%; /* Adjust width for smaller screens */
+    padding: 10px; /* Adjust padding for smaller screens */
+    margin: 10px auto; /* Center horizontally */
+  }
+
+  .post_form input,
+  .post_form textarea,
+  .post_form button {
+    width: calc(100% - 16px); /* Adjust width for smaller screens */
+    padding: 6px; /* Adjust padding for smaller screens */
+  }
+
+  /* NO POST CSS */
+  .no-posts-container {
+    margin: 20px auto;
+    padding: 10px;
+    max-width: 90%;
+  }
+}
